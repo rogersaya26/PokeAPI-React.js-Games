@@ -20,7 +20,7 @@ const Main = () => {
     setNextUrl(res.data.next)
     setPrevUrl(res.data.previous)
     getPokemon(res.data.results)
-    
+
     setLoading(false)
     //console.log(pokeData)
   }
@@ -40,14 +40,14 @@ const Main = () => {
 
 useEffect(() => {
   pokeFun()
-}, [url])
+})
 
   return (
     <>
       <div className="container">
         <div className="left-content">
           <Card pokemon={pokeData} loading={loading} infoPokemon={poke => setPokeDex(poke)}/>
-        
+
           <div className="btn-group">
 
             { prevUrl && <button onClick={() => {
